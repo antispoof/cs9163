@@ -36,7 +36,6 @@ def sq_resizer(path_to_file):
 		sys.exit(1)
 
 def main(path_to_file):
-	#path_to_file = "../../Downloads/cs.jpg"
 	sq_resizer(path_to_file)
 
 if __name__ == "__main__": 
