@@ -5,6 +5,7 @@
 
 #modules needed
 import os, sys
+import argparse
 from PIL import Image
 
 #function to open image and resize
@@ -34,9 +35,12 @@ def sq_resizer(path_to_file):
 		print e
 		sys.exit(1)
 
-def main():
-	path_to_file = "../../Downloads/cs.jpg"
+def main(path_to_file):
+	#path_to_file = "../../Downloads/cs.jpg"
 	sq_resizer(path_to_file)
 
 if __name__ == "__main__": 
-    main() 
+	parser = argparse.ArgumentParser()
+	parser.add_argument("path_to_file", help="file to be resized here")
+	args = parser.parse_args()
+	main(args.path_to_file) 
